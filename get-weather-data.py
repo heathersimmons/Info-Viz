@@ -1,3 +1,5 @@
+#  Modified from Nathan Yau's book, Visualize This, Chapter 2
+
 import urllib2
 from bs4 import BeautifulSoup
  
