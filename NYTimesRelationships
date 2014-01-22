@@ -1,0 +1,25 @@
+import blprnt.nytimes.*;
+
+void setup()
+{
+ size (800,350);
+background(255);
+
+//String baseURL = "http://api.nytimes.com/svc/search/v1/article";
+TimesEngine.init(this,"215f6f2156a79e273606756274d38e57:19:68414926");
+
+TimesArticleSearch mySearch = new TimesArticleSearch();
+
+mySearch.addQueries("+");
+mySearch.addFacetQuery("per_facet", "MANDELA, NELSON");
+mySearch.addFacetQuery("publication_year", "1994");
+mySearch.addFacetQuery("desk_facet", "Foreign Desk");
+mySearch.addFacets("per_facet");
+
+TimesArticleSearchResult r = mySearch.doSearch();
+TimesFacetObject[] stars = r.getFacetList("per_facet");
+for(int i = 0; i < stars.length; i++){
+ println(stars[i].term); 
+}
+
+}
