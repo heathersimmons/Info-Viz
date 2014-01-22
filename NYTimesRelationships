@@ -6,7 +6,7 @@ void setup()
 background(255);
 
 //String baseURL = "http://api.nytimes.com/svc/search/v1/article";
-TimesEngine.init(this,"215f6f2156a79e273606756274d38e57:19:68414926");
+TimesEngine.init(this,"Your API key goes here");
 
 TimesArticleSearch mySearch = new TimesArticleSearch();
 
