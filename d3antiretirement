@@ -106,7 +106,7 @@
         return d3.ascending(a, b);
        	} else {
         return d3.descending(a, b);
-        						}
+        	}
          })
         .transition()
         .duration(1000)
