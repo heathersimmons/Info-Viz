@@ -96,9 +96,9 @@
            	 sortChart();
       			});
 	  
-		var sortOrder = false;
-		var sortChart = function() {
-	 	sortOrder = !sortOrder;
+	var sortOrder = false;
+	var sortChart = function() {
+	 sortOrder = !sortOrder;
 
        svg.selectAll("rect")
        .sort(function(a, b) {
